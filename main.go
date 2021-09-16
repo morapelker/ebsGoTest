@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
 import "github.com/gin-gonic/gin"
 
 func main() {
@@ -9,6 +12,9 @@ func main() {
 		c.JSON(200, gin.H{
 			"message": "pong",
 		})
+	})
+	r.GET("/mor", func(context *gin.Context) {
+		context.JSON(http.StatusOK, gin.H{"result": "ok"})
 	})
 	fmt.Println("server started")
 	_ = r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
