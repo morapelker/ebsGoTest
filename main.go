@@ -12,6 +12,7 @@ func main() {
 		c.JSON(200, gin.H{
 			"message": "a",
 		})
+
 	})
 	r.GET("/mor", func(context *gin.Context) {
 		context.JSON(http.StatusOK, gin.H{"result": "ok"})
