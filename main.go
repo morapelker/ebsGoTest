@@ -13,6 +13,7 @@ func main() {
 		c.JSON(200, gin.H{
 			"message": "asdddw",
 		})
+
 	})
 
 	r.GET("/mor", func(context *gin.Context) {
