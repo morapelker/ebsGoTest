@@ -14,6 +14,7 @@ func main() {
 			"message": "asssd",
 		})
 	})
+
 	r.GET("/mor", func(context *gin.Context) {
 		context.JSON(http.StatusOK, gin.H{"result": "ok"})
 	})
